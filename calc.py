@@ -1,5 +1,5 @@
 import tkinter as tk
-
+import tkinter.font as f
 
 ans = 0 #数字のボタンを押した時格納する変数
 sum = 0 #足し引きした際の合計の値を格納する変数
@@ -117,24 +117,22 @@ def riset():
 
 #最初の画面
 base = tk.Tk()
-base.geometry("700x700")
+base.geometry("420x500")
 base.title("電卓")
 label = tk.StringVar()
 label2 = tk.StringVar()
-input_label = tk.Label(base,textvariable=label)
-input_label.place(x=100, y=10)
-input_label2 = tk.Label(base,textvariable=label2)
-input_label2.place(x=300, y=10)
+input_label = tk.Label(base,textvariable=label,font=("MSゴシック", "20", "bold"))
+input_label.place(x=198, y=50)
 button = tk.Button(base,text="１",width=10,height=5,command=one)
 button.place(x=70, y=100)
 button2 = tk.Button(base,text="２",width=10,height=5,command=two)
 button2.place(x=70, y=200)
 button3 = tk.Button(base,text="＋",width=10,height=5,command=plus)
-button3.place(x=150, y=100)
+button3.place(x=250, y=100)
 button4 = tk.Button(base,text="－",width=10,height=5,command=minus)
-button4.place(x=150, y=200)
+button4.place(x=250, y=200)
 button5 = tk.Button(base,text="＝",width=10,height=5,command=answer)
-button5.place(x=100, y=300)
+button5.place(x=160, y=300)
 button6 = tk.Button(base,text="リセット",width=10,height=5,command=riset)
-button6.place(x=100, y=400)
+button6.place(x=160, y=400)
 base.mainloop()
